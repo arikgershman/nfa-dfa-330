@@ -35,7 +35,7 @@ let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list = let rec h
 | h::t -> (helper nfa t s) @ (let rec helper2 nfad q s ret = match nfad with
     | [] -> ret
     | x::xs -> match x with
-      | (q0,c,q1) -> if (q0=q && c=s) then (helper2 xs q s (q1::ret)) else (helper2 xs q s ret)
+      | (q0,c,q1) -> if (q0=q && c=s) then (helper2 xs q s (ret@[q1])) else (helper2 xs q s ret)
   in helper2 nfa.delta h s [])
 in helper nfa qs s
 
@@ -66,7 +66,7 @@ in List.rev (helper nfa.sigma [])
 
 let new_trans (nfa: ('q,'s) nfa_t) (qs: 'q list) : ('q list, 's) transition list = let rec helper sigm ret = match sigm with 
 [] -> ret
-| h::t -> helper t ( (qs, Some(h) , (e_closure nfa ((move nfa qs (Some(h))))) ) :: ret  )
+| h::t -> helper t ((qs, Some(h), (e_closure nfa ((move nfa qs (Some(h))))))::ret)
 in List.rev (helper nfa.sigma [])
 
 let new_finals (nfa: ('q,'s) nfa_t) (qs: 'q list) : 'q list list = let rec helper sts fin = match sts with
@@ -85,7 +85,7 @@ let rec nfa_to_dfa_step (nfa: ('q,'s) nfa_t) (dfa: ('q list, 's) nfa_t)
                 sigma = dfa.sigma;
                 qs = List.sort_uniq Stdlib.compare qss;
                 q0 = dfa.q0;
-                fs = List.sort_uniq Stdlib.compare (dfa.fs@(let rec helper sts ret = match sts with []->ret | x::xs-> (helper xs (ret@new_finals nfa x)) in helper qss []));
+                fs = List.sort_uniq Stdlib.compare (dfa.fs@(let rec helper sts ret = match sts with []->ret | x::xs-> (helper xs (ret@(new_finals nfa x))) in helper qss []));
                 (*delta = (let n = (new_trans nfa h) in match n with [(_,_,[])]->dfa.delta | _->(dfa.delta@n))*)
                 delta = (dfa.delta@(new_trans nfa h))
                 }) t
