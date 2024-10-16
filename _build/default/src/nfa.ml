@@ -29,33 +29,25 @@ let explode (s: string) : char list =
 (****************)
 (* Part 1: NFAs *)
 (****************)
-
 (*
-let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list = let rec helper nfa qs s = match qs with
-| [] -> []
-| h::t -> (helper nfa t s) @ (let rec helper2 nfad q s ret = match nfad with
-    | [] -> ret
-    | x::xs -> match x with
-      | (q0,c,q1) -> if (q0=q && c=s) then (helper2 xs q s (ret@[q1])) else (helper2 xs q s ret)
-  in helper2 nfa.delta h s [])
-in helper nfa qs s
-*)
-
-
 let move (nfa: ('q, 's) nfa_t) (qs: 'q list) (s: 's option) : 'q list =
-  (* Helper function to process each state in qs *)
   let rec helper ac qss = match qss with
     | [] -> ac
-    | q::t ->
-        let rec helper2 acc qsss = match qsss with
-          | [] -> acc
-          | (q0, c, q1) :: xs ->
-              if (q0=q && c=s) then helper2 (q1::acc) xs
-              else helper2 acc xs
-        in
-        helper (helper2 ac nfa.delta) t
-  in
-  helper [] qs
+    | q::t -> let rec helper2 acc qsss = match qsss with
+              | [] -> acc
+              | (q0, c, q1)::xs -> if (q0=q && c=s) then helper2 (q1::acc) xs else helper2 acc xs
+              in helper (helper2 ac nfa.delta) t
+  in helper [] qs
+*)
+
+  let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list =
+    (* Helper method to determine if the nfa delta matches the transition we want *)
+      (* Returns a list of all the matches using List.filter *)
+       let complete_matches = List.filter (fun (q0, c, q1) -> (elem q0 qs) && (c = s)) nfa.delta
+    in 
+    (* Extract the target states *)
+    List.fold_left (fun acc (_, _, q1) -> insert q1 acc) [] complete_matches
+
 
 
 
