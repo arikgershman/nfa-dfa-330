@@ -39,19 +39,32 @@ let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list = let rec h
   in helper2 nfa.delta h s [])
 in helper nfa qs s
 
-let e_closure (nfa: ('q,'s) nfa_t) (qs: 'q list) : 'q list = let fin = let rec helper nfa qs v = match qs with
-| [] -> []
-| h::t -> [h] @ (helper nfa t (h::v)) @ (let ret = 
 
-  (let rec helper2 nfad q ret = match nfad with
-    | [] -> ret
-    | x::xs -> match x with
-      | (q0,c,q1) -> if (q0=q && c=None) then (if (not (elem q ret)) then (helper2 xs q (q1::ret)) else (helper2 xs q ret)) else (helper2 xs q ret)
-  in helper2 nfa.delta h [])
+(*
+let move (nfa: ('q, 's) nfa_t) (qs: 'q list) (s: 's option) : 'q list =
+  (* Helper function to process each state in qs *)
+  let rec helper acc = function
+    | [] -> acc
+    | q :: rest ->
+        (* Find all states reachable from q on symbol s and add to acc *)
+        let rec helper2 acc = function
+          | [] -> acc
+          | (q0, c, q1) :: xs ->
+              if q0 = q && c = s then helper2 (q1 :: acc) xs
+              else helper2 acc xs
+        in
+        helper (helper2 acc nfa.delta) rest
+  in
+  helper [] qs
+*)
 
-in if subset ret v then v else (helper nfa ret (h::v)))
-in helper nfa qs []
-in List.sort_uniq Stdlib.compare fin
+
+let e_closure (nfa: ('q,'s) nfa_t) (qs: 'q list) : 'q list = let rec helper v qss =
+    match qss with
+    | [] -> v
+    | x::xs -> if elem x v then helper v xs else (let em = (move nfa [x] None)
+                in helper (insert x v) (List.sort_uniq Stdlib.compare (em@xs)))
+  in helper [] qs
 
 (*accept implementation in Part 2*)
 
@@ -77,37 +90,28 @@ let new_finals (nfa: ('q,'s) nfa_t) (qs: 'q list) : 'q list list = let rec helpe
 in helper qs []
 
 let rec nfa_to_dfa_step (nfa: ('q,'s) nfa_t) (dfa: ('q list, 's) nfa_t)
-    (work: 'q list list) : ('q list, 's) nfa_t = match work with
-    [] -> dfa
-    | h::t -> nfa_to_dfa_step nfa (let qss = dfa.qs@(new_states nfa h) in 
-                                  (*(let qss = (let n = (new_states nfa h) in match n with [[]]->dfa.qs | _->(dfa.qs@n)) in*)       
-                {
-                sigma = dfa.sigma;
-                qs = List.sort_uniq Stdlib.compare qss;
-                q0 = dfa.q0;
-                fs = List.sort_uniq Stdlib.compare (dfa.fs@(let rec helper sts ret = match sts with []->ret | x::xs-> (helper xs (ret@(new_finals nfa x))) in helper qss []));
-                (*delta = (let n = (new_trans nfa h) in match n with [(_,_,[])]->dfa.delta | _->(dfa.delta@n))*)
-                delta = (dfa.delta@(new_trans nfa h))
-                }) t
+    (work: 'q list list) (dfaqs: 'q list list) : ('q list, 's) nfa_t = match work with
+    | [] -> dfa
+    | qs::rest -> let add dfaqs qs = if elem qs dfaqs then dfaqs else qs::dfaqs in
+    let qss = new_states nfa qs in let ndfa = {
+          sigma = nfa.sigma;
+          qs = List.fold_left add dfaqs qss;
+          q0 = dfa.q0;
+          fs = List.fold_left add dfa.fs (new_finals nfa qs);
+          delta = List.fold_left (fun acc t -> if elem t acc then acc else t::acc) dfa.delta (new_trans nfa qs);
+        } 
+      in nfa_to_dfa_step nfa ndfa ((List.filter (fun s -> not (elem s dfaqs)) qss) @ rest) ndfa.qs
 
-let nfa_to_dfa (nfa: ('q,'s) nfa_t) : ('q list, 's) nfa_t = let ret = let dfa = {
-  sigma= nfa.sigma;
-  qs= [e_closure nfa [nfa.q0]];
-  q0= e_closure nfa [nfa.q0];
-  fs= [];
-  delta= []
+let nfa_to_dfa (nfa: ('q,'s) nfa_t) : ('q list, 's) nfa_t =
+  let q0 = e_closure nfa [nfa.q0]
+  in let dfa = {
+    sigma = nfa.sigma;
+    qs = [q0];
+    q0 = q0;
+    fs = if (elem q0 [nfa.fs]) then [q0] else [];
+    delta = [];
   } 
-in let visited = [] in let rec helper v d = match (v,d.qs) with
-([],b) -> helper (v@b) (nfa_to_dfa_step nfa d (v@b))
-| (a,b) -> if a=b then d else let v1 = List.sort_uniq Stdlib.compare (v@b) in helper v1 (nfa_to_dfa_step nfa d v1)
-in helper visited dfa
-in {
-  sigma = ret.sigma;
-  qs = List.sort_uniq Stdlib.compare ret.qs;
-  q0 = List.sort_uniq Stdlib.compare ret.q0;
-  fs = List.sort_uniq Stdlib.compare ret.fs;
-  delta = List.sort_uniq Stdlib.compare ret.delta
-}
+in nfa_to_dfa_step nfa dfa [q0] [q0]
 
 let accept (nfa: ('q,char) nfa_t) (s: string) : bool = let dfa = (nfa_to_dfa nfa) in let rec helper dfa cl current = 
   match cl with
