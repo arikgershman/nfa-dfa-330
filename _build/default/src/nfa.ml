@@ -43,10 +43,9 @@ let move (nfa: ('q, 's) nfa_t) (qs: 'q list) (s: 's option) : 'q list =
   let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list =
     (* Helper method to determine if the nfa delta matches the transition we want *)
       (* Returns a list of all the matches using List.filter *)
-       let complete_matches = List.filter (fun (q0, c, q1) -> (elem q0 qs) && (c = s)) nfa.delta
-    in 
+
     (* Extract the target states *)
-    List.fold_left (fun acc (_, _, q1) -> insert q1 acc) [] complete_matches
+    List.fold_left (fun acc (_, _, q) -> insert q acc) [] (List.filter (fun (q0, c, q1) -> (elem q0 qs) && (c = s)) nfa.delta)
 
 
 
