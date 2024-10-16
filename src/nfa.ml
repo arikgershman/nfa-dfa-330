@@ -30,34 +30,14 @@ let explode (s: string) : char list =
 (* Part 1: NFAs *)
 (****************)
 
-let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list = let rec helper nfa qs s = match qs with
-| [] -> []
-| h::t -> (helper nfa t s) @ (let rec helper2 nfad q s ret = match nfad with
-    | [] -> ret
-    | x::xs -> match x with
-      | (q0,c,q1) -> if (q0=q && c=s) then (helper2 xs q s (ret@[q1])) else (helper2 xs q s ret)
-  in helper2 nfa.delta h s [])
-in helper nfa qs s
-
-
-(*
 let move (nfa: ('q, 's) nfa_t) (qs: 'q list) (s: 's option) : 'q list =
-  (* Helper function to process each state in qs *)
-  let rec helper acc = function
-    | [] -> acc
-    | q :: rest ->
-        (* Find all states reachable from q on symbol s and add to acc *)
-        let rec helper2 acc = function
-          | [] -> acc
-          | (q0, c, q1) :: xs ->
-              if q0 = q && c = s then helper2 (q1 :: acc) xs
-              else helper2 acc xs
-        in
-        helper (helper2 acc nfa.delta) rest
-  in
-  helper [] qs
-*)
-
+  let rec helper ac qss = match qss with
+    | [] -> ac
+    | q::t -> let rec helper2 acc qsss = match qsss with
+              | [] -> acc
+              | (q0, c, q1)::xs -> if (q0=q && c=s) then helper2 (q1::acc) xs else helper2 acc xs
+              in helper (helper2 ac nfa.delta) t
+  in helper [] qs
 
 let e_closure (nfa: ('q,'s) nfa_t) (qs: 'q list) : 'q list = let rec helper v qss =
     match qss with
