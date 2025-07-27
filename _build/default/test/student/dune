@@ -1,8 +1,0 @@
-(tests
-    (names student)
-    (libraries p3 ounit2 testUtils))
-
-(env
- (dev
-  (flags
-   (:standard -w -A))))

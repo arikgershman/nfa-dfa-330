@@ -1,4 +1,7 @@
+# OCaml Build Artifacts
 _build/
+
+# Project-specific or sensitive files
 LATE_TOKEN
 viz.sh
 
