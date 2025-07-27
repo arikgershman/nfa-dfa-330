@@ -1,130 +1,128 @@
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Runner: processes
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Chooser: simple
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration suite_name = "public"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration cache_filename = "/Users/arikgershman/Desktop/3-arikger9/_build/default/test/public/oUnit-$(suite_name).cache"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration run_gc_full_major = "true"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration display = "true"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration results_style_1_X = "false"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration testdata_dir = "none"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration health_check_interval = "1."
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration verbose = "false"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration chooser = "simple"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration output_html_dir = "none"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration processes_kill_period = "5."
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration runner = "processes"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration shards = "2"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration processes_grace_period = "5."
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration log_encoding = "utf-8"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration output_junit_file = "none"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration ci = "false"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration output_file = "/Users/arikgershman/Desktop/3-arikger9/_build/default/test/public/oUnit-$(suite_name)-$(shard_id).log"
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Using 2 workers maximum.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Starting worker number mac.lan#01.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Worker mac.lan#01 started.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Starting worker number mac.lan#02.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Worker mac.lan#02 started.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:1:nfa_closure, public:0:nfa_accept.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Start test public:0:nfa_accept.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:1:nfa_closure, public:0:nfa_accept.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Test public:0:nfa_accept is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:1:nfa_closure, public:0:nfa_accept.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: End test public:0:nfa_accept.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:1:nfa_closure, public:0:nfa_accept.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:2:nfa_move, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Start test public:2:nfa_move.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:2:nfa_move, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Test public:2:nfa_move is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:2:nfa_move, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: End test public:2:nfa_move.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:2:nfa_move, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Start test public:3:nfa_to_dfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#02 I: Start test public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Test public:3:nfa_to_dfa is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: End test public:3:nfa_to_dfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:4:re_to_nfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Start test public:4:re_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:4:re_to_nfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Test public:4:re_to_nfa is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:4:re_to_nfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: End test public:4:re_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:4:re_to_nfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:5:str_to_nfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Start test public:5:str_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:5:str_to_nfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#02 I: Test public:1:nfa_closure is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:5:str_to_nfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#02 I: End test public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:5:str_to_nfa, public:1:nfa_closure.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:6:nfa_new_states, public:5:str_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#02 I: Start test public:6:nfa_new_states.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:6:nfa_new_states, public:5:str_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Test public:5:str_to_nfa is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:6:nfa_new_states, public:5:str_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: End test public:5:str_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:6:nfa_new_states, public:5:str_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:7:nfa_new_trans, public:6:nfa_new_states.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Start test public:7:nfa_new_trans.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:7:nfa_new_trans, public:6:nfa_new_states.
-2025-07-27T18:14:32+00:00 mac.lan#02 I: Test public:6:nfa_new_states is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:7:nfa_new_trans, public:6:nfa_new_states.
-2025-07-27T18:14:32+00:00 mac.lan#02 I: End test public:6:nfa_new_states.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:7:nfa_new_trans, public:6:nfa_new_states.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:8:nfa_new_finals, public:7:nfa_new_trans.
-2025-07-27T18:14:32+00:00 mac.lan#02 I: Start test public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:8:nfa_new_finals, public:7:nfa_new_trans.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Test public:7:nfa_new_trans is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:8:nfa_new_finals, public:7:nfa_new_trans.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: End test public:7:nfa_new_trans.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:8:nfa_new_finals, public:7:nfa_new_trans.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 2 tests running : public:9:regex_to_nfa, public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:9:regex_to_nfa, public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Start test public:9:regex_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 2 tests running : public:9:regex_to_nfa, public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:9:regex_to_nfa, public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#02 I: Test public:8:nfa_new_finals is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 2 tests running : public:9:regex_to_nfa, public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:9:regex_to_nfa, public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#02 I: End test public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 2 tests running : public:9:regex_to_nfa, public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 2 tests running: public:9:regex_to_nfa, public:8:nfa_new_finals.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 1 tests running : public:9:regex_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 1 tests running: public:9:regex_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: Test public:9:regex_to_nfa is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 1 tests running : public:9:regex_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 1 tests running: public:9:regex_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#01 I: End test public:9:regex_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 1 tests running : public:9:regex_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 1 tests running: public:9:regex_to_nfa.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: 0 tests running: .
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Worker mac.lan#02 has ended.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Worker mac.lan#01 has ended.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Used 2 worker during test execution.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Run 3 tests with shard mac.lan#02.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Run 7 tests with shard mac.lan#01.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Check health of shard mac.lan#02, 4 times.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Check health of shard mac.lan#01, 1 times.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: ==============
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Summary:
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:9:regex_to_nfa is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:8:nfa_new_finals is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:7:nfa_new_trans is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:6:nfa_new_states is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:5:str_to_nfa is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:1:nfa_closure is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:4:re_to_nfa is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:3:nfa_to_dfa is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:2:nfa_move is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Test public:0:nfa_accept is successful.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Ran: 10 tests in: 0.11 seconds.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Cases: 10.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Tried: 10.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Errors: 0.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Failures: 0.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Skip: 0.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Todo: 0.
-2025-07-27T18:14:32+00:00 mac.lan#00 I: Timeout: 0.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Runner: processes
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Chooser: simple
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration suite_name = "public"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration cache_filename = "/Users/arikgershman/Desktop/3-arikger9/_build/default/test/public/oUnit-$(suite_name).cache"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration run_gc_full_major = "true"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration display = "true"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration results_style_1_X = "false"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration testdata_dir = "none"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration health_check_interval = "1."
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration verbose = "false"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration chooser = "simple"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration output_html_dir = "none"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration processes_kill_period = "5."
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration runner = "processes"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration shards = "2"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration processes_grace_period = "5."
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration log_encoding = "utf-8"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration output_junit_file = "none"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration ci = "false"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Configuration output_file = "/Users/arikgershman/Desktop/3-arikger9/_build/default/test/public/oUnit-$(suite_name)-$(shard_id).log"
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Using 2 workers maximum.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Starting worker number mac.lan#01.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Worker mac.lan#01 started.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Starting worker number mac.lan#02.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Worker mac.lan#02 started.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:1:nfa_closure, public:0:nfa_accept.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Start test public:0:nfa_accept.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:1:nfa_closure, public:0:nfa_accept.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Test public:0:nfa_accept is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:1:nfa_closure, public:0:nfa_accept.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: End test public:0:nfa_accept.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:1:nfa_closure, public:0:nfa_accept.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:2:nfa_move, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Start test public:2:nfa_move.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:2:nfa_move, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Test public:2:nfa_move is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:2:nfa_move, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: End test public:2:nfa_move.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:2:nfa_move, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Start test public:3:nfa_to_dfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: Start test public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Test public:3:nfa_to_dfa is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: End test public:3:nfa_to_dfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:3:nfa_to_dfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:4:re_to_nfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Start test public:4:re_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:4:re_to_nfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Test public:4:re_to_nfa is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:4:re_to_nfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: End test public:4:re_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:4:re_to_nfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:5:str_to_nfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Start test public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:5:str_to_nfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: Test public:1:nfa_closure is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:5:str_to_nfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: End test public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:5:str_to_nfa, public:1:nfa_closure.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:6:nfa_new_states, public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: Start test public:6:nfa_new_states.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:6:nfa_new_states, public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: Test public:6:nfa_new_states is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:6:nfa_new_states, public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: End test public:6:nfa_new_states.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:6:nfa_new_states, public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:7:nfa_new_trans, public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: Start test public:7:nfa_new_trans.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:7:nfa_new_trans, public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Test public:5:str_to_nfa is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:7:nfa_new_trans, public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: End test public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:7:nfa_new_trans, public:5:str_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:8:nfa_new_finals, public:7:nfa_new_trans.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Start test public:8:nfa_new_finals.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:8:nfa_new_finals, public:7:nfa_new_trans.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: Test public:7:nfa_new_trans is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:8:nfa_new_finals, public:7:nfa_new_trans.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: End test public:7:nfa_new_trans.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:8:nfa_new_finals, public:7:nfa_new_trans.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Still 2 tests running : public:9:regex_to_nfa, public:8:nfa_new_finals.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:9:regex_to_nfa, public:8:nfa_new_finals.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: Test public:8:nfa_new_finals is successful.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: Start test public:9:regex_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Still 2 tests running : public:9:regex_to_nfa, public:8:nfa_new_finals.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:9:regex_to_nfa, public:8:nfa_new_finals.
+2025-07-27T18:17:49+00:00 mac.lan#01 I: End test public:8:nfa_new_finals.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Still 2 tests running : public:9:regex_to_nfa, public:8:nfa_new_finals.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 2 tests running: public:9:regex_to_nfa, public:8:nfa_new_finals.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Still 1 tests running : public:9:regex_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 1 tests running: public:9:regex_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: Test public:9:regex_to_nfa is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Still 1 tests running : public:9:regex_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 1 tests running: public:9:regex_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#02 I: End test public:9:regex_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Still 1 tests running : public:9:regex_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 1 tests running: public:9:regex_to_nfa.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: 0 tests running: .
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Worker mac.lan#01 has ended.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Worker mac.lan#02 has ended.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Used 2 worker during test execution.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Run 4 tests with shard mac.lan#02.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Run 6 tests with shard mac.lan#01.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Check health of shard mac.lan#02, 1 times.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Check health of shard mac.lan#01, 4 times.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: ==============
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Summary:
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:9:regex_to_nfa is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:8:nfa_new_finals is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:7:nfa_new_trans is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:5:str_to_nfa is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:6:nfa_new_states is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:1:nfa_closure is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:4:re_to_nfa is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:3:nfa_to_dfa is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:2:nfa_move is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Test public:0:nfa_accept is successful.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Ran: 10 tests in: 0.11 seconds.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Cases: 10.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Tried: 10.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Errors: 0.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Failures: 0.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Skip: 0.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Todo: 0.
+2025-07-27T18:17:49+00:00 mac.lan#00 I: Timeout: 0.
