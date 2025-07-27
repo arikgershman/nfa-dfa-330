@@ -30,7 +30,7 @@ let explode (s: string) : char list =
 (* Part 1: NFAs *)
 (****************)
 
-  let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list = List.fold_left 
+let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list = List.fold_left 
   (fun acc (_, _, q) -> insert q acc) [] 
   (List.filter (fun (q0, c, q1) -> (elem q0 qs) && (c = s)) nfa.delta)
 

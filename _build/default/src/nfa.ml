@@ -29,26 +29,10 @@ let explode (s: string) : char list =
 (****************)
 (* Part 1: NFAs *)
 (****************)
-(*
-let move (nfa: ('q, 's) nfa_t) (qs: 'q list) (s: 's option) : 'q list =
-  let rec helper ac qss = match qss with
-    | [] -> ac
-    | q::t -> let rec helper2 acc qsss = match qsss with
-              | [] -> acc
-              | (q0, c, q1)::xs -> if (q0=q && c=s) then helper2 (q1::acc) xs else helper2 acc xs
-              in helper (helper2 ac nfa.delta) t
-  in helper [] qs
-*)
 
-  let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list =
-    (* Helper method to determine if the nfa delta matches the transition we want *)
-      (* Returns a list of all the matches using List.filter *)
-
-    (* Extract the target states *)
-    List.fold_left (fun acc (_, _, q) -> insert q acc) [] (List.filter (fun (q0, c, q1) -> (elem q0 qs) && (c = s)) nfa.delta)
-
-
-
+let move (nfa: ('q,'s) nfa_t) (qs: 'q list) (s: 's option) : 'q list = List.fold_left 
+  (fun acc (_, _, q) -> insert q acc) [] 
+  (List.filter (fun (q0, c, q1) -> (elem q0 qs) && (c = s)) nfa.delta)
 
 let e_closure (nfa: ('q,'s) nfa_t) (qs: 'q list) : 'q list = let rec helper v qss =
     match qss with

@@ -2,8 +2,8 @@
 # OCAMLPARAM: unset
 # Shared cache: disabled
 # Shared cache location: /Users/arikgershman/.cache/dune/db
-# Workspace root: /Users/arikgershman/cmsc330spring24/3-arikger9
-# Auto-detected concurrency: 4
+# Workspace root: /Users/arikgershman/Desktop/3-arikger9
+# Auto-detected concurrency: 10
 # Dune context:
 #  { name = "default"
 #  ; kind = "default"
@@ -13,24 +13,28 @@
 #  ; build_dir = In_build_dir "default"
 #  ; instrument_with = []
 #  }
-$ /Users/arikgershman/.opam/4.14.0/bin/ocamlc.opt -config > /var/folders/q8/p6_l8rn972d1q863dflntpx00000gn/T/dune_e5e32b_output
+$ /Users/arikgershman/.opam/4.14.0/bin/ocamlc.opt -config > /var/folders/kq/vxq5bs813h17x2dxs6qdfpj00000gn/T/dune_f4b658_output
 $ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamldep.opt -modules -impl src/nfa.ml) > _build/default/src/.p3.objs/p3__Nfa.impl.d
+$ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamldep.opt -modules -impl src/sets.ml) > _build/default/src/.p3.objs/p3__Sets.impl.d
+$ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamldep.opt -modules -impl src/regexp.ml) > _build/default/src/.p3.objs/p3__Regexp.impl.d
+$ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -I src/.p3.objs/byte -I src/.p3.objs/native -I /Users/arikgershman/.opam/4.14.0/lib/re -I /Users/arikgershman/.opam/4.14.0/lib/seq -intf-suffix .ml -no-alias-deps -opaque -open P3 -o src/.p3.objs/native/p3__Sets.cmx -c -impl src/sets.ml)
 $ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -I src/.p3.objs/byte -I src/.p3.objs/native -I /Users/arikgershman/.opam/4.14.0/lib/re -I /Users/arikgershman/.opam/4.14.0/lib/seq -intf-suffix .ml -no-alias-deps -opaque -open P3 -o src/.p3.objs/native/p3__Nfa.cmx -c -impl src/nfa.ml)
+$ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -I src/.p3.objs/byte -I src/.p3.objs/native -I /Users/arikgershman/.opam/4.14.0/lib/re -I /Users/arikgershman/.opam/4.14.0/lib/seq -intf-suffix .ml -no-alias-deps -opaque -open P3 -o src/.p3.objs/native/p3__Regexp.cmx -c -impl src/regexp.ml)
 $ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -a -o src/p3.cmxa src/.p3.objs/native/p3.cmx src/.p3.objs/native/p3__Sets.cmx src/.p3.objs/native/p3__Nfa.cmx src/.p3.objs/native/p3__Regexp.cmx)
+$ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/pbt/pbt.exe /Users/arikgershman/.opam/4.14.0/lib/ocaml/unix.cmxa -I /Users/arikgershman/.opam/4.14.0/lib/ocaml /Users/arikgershman/.opam/4.14.0/lib/qcheck-core/qcheck_core.cmxa /Users/arikgershman/.opam/4.14.0/lib/qcheck-core/runner/qcheck_runner.cmxa /Users/arikgershman/.opam/4.14.0/lib/stdlib-shims/stdlib_shims.cmxa /Users/arikgershman/.opam/4.14.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/arikgershman/.opam/4.14.0/lib/ounit2/oUnit.cmxa /Users/arikgershman/.opam/4.14.0/lib/qcheck-ounit/qcheck_ounit.cmxa /Users/arikgershman/.opam/4.14.0/lib/qcheck/qcheck.cmxa /Users/arikgershman/.opam/4.14.0/lib/re/re.cmxa src/p3.cmxa test/testUtils.cmxa test/pbt/.pbt.eobjs/native/dune__exe__Pbt.cmx)
 $ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -w -A -g -o test/student/student.exe /Users/arikgershman/.opam/4.14.0/lib/re/re.cmxa src/p3.cmxa /Users/arikgershman/.opam/4.14.0/lib/ocaml/unix.cmxa -I /Users/arikgershman/.opam/4.14.0/lib/ocaml /Users/arikgershman/.opam/4.14.0/lib/stdlib-shims/stdlib_shims.cmxa /Users/arikgershman/.opam/4.14.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/arikgershman/.opam/4.14.0/lib/ounit2/oUnit.cmxa test/testUtils.cmxa test/student/.student.eobjs/native/dune__exe__Student.cmx)
 $ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/public/public.exe /Users/arikgershman/.opam/4.14.0/lib/re/re.cmxa src/p3.cmxa /Users/arikgershman/.opam/4.14.0/lib/ocaml/unix.cmxa -I /Users/arikgershman/.opam/4.14.0/lib/ocaml /Users/arikgershman/.opam/4.14.0/lib/stdlib-shims/stdlib_shims.cmxa /Users/arikgershman/.opam/4.14.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/arikgershman/.opam/4.14.0/lib/ounit2/oUnit.cmxa test/testUtils.cmxa test/public/.public.eobjs/native/dune__exe__Public.cmx)
-$ (cd _build/default && /Users/arikgershman/.opam/4.14.0/bin/ocamlopt.opt -w @1..3@5..28@30..39@43@46..47@49..57@61..62-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/pbt/pbt.exe /Users/arikgershman/.opam/4.14.0/lib/ocaml/unix.cmxa -I /Users/arikgershman/.opam/4.14.0/lib/ocaml /Users/arikgershman/.opam/4.14.0/lib/qcheck-core/qcheck_core.cmxa /Users/arikgershman/.opam/4.14.0/lib/qcheck-core/runner/qcheck_runner.cmxa /Users/arikgershman/.opam/4.14.0/lib/stdlib-shims/stdlib_shims.cmxa /Users/arikgershman/.opam/4.14.0/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/arikgershman/.opam/4.14.0/lib/ounit2/oUnit.cmxa /Users/arikgershman/.opam/4.14.0/lib/qcheck-ounit/qcheck_ounit.cmxa /Users/arikgershman/.opam/4.14.0/lib/qcheck/qcheck.cmxa /Users/arikgershman/.opam/4.14.0/lib/re/re.cmxa src/p3.cmxa test/testUtils.cmxa test/pbt/.pbt.eobjs/native/dune__exe__Pbt.cmx)
+$ (cd _build/default/test/public && ./public.exe)
+> ..........
+> Ran: 10 tests in: 0.11 seconds.
+> OK
 $ (cd _build/default/test/student && ./student.exe)
 > .
 > Ran: 1 tests in: 0.11 seconds.
 > OK
-$ (cd _build/default/test/public && ./public.exe)
-> ..........
-> Ran: 10 tests in: 0.14 seconds.
-> OK
 $ (cd _build/default/test/pbt && ./pbt.exe)
->  seed: 270753721
+>  seed: 404829833
 > generated error fail pass / total     time test name
-> ✓]  100    0    0  100 /  100     1.0s regex_to_nfa_accept
+> ✓]  100    0    0  100 /  100     0.4s regex_to_nfa_accept
 > ================================================================================
 > success (ran 1 tests)

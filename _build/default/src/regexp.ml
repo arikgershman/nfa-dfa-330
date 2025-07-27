@@ -26,28 +26,6 @@ let fresh =
 (* Part 3: Regular Expressions *)
 (*******************************)
 
-(*
-let regexp_to_nfa (regexp: regexp_t) : (int, char) nfa_t = let ret = let rec helper r q nfa = match r with 
-| Empty_String -> {sigma = nfa.sigma; qs = q::nfa.qs; q0 = nfa.q0; fs = q::nfa.fs; delta = nfa.delta}
-| Char(c) -> helper Empty_String (fresh ()) {sigma = c::nfa.sigma; qs = q::nfa.qs; q0 = q; fs = nfa.fs; delta = (q,Some(c),q+1)::nfa.delta}
-| Union(a,b) -> let nfaa = (helper a (fresh ()) nfa) in let nfab = (helper b (fresh ()) nfa) in 
-                {sigma = nfaa.sigma@nfab.sigma; qs = q::(nfaa.qs@nfab.qs); q0 = q; fs = nfaa.fs@nfab.fs; delta = (q,None,nfaa.q0)::(q,None,nfab.q0)::(nfaa.delta@nfab.delta)}
-| Concat(a,b) -> let nfaa = (helper a (fresh ()) nfa) in let nfab = (helper b (fresh ()) nfa) in 
-                  {sigma = nfaa.sigma@nfab.sigma; qs = nfaa.qs@nfab.qs; q0 = nfaa.q0; fs = nfab.fs; delta = 
-                  (let rec helper1 lst = match lst with 
-                  [] -> []
-                  | h::t -> (h,None,nfab.q0)::(helper1 t)
-                  in helper1 nfaa.fs)@(nfaa.delta@nfab.delta)}
-| Star(a) -> let nfaa = (helper a (fresh ()) nfa) in 
-              {sigma = nfaa.sigma; qs = (fresh ())::q::nfaa.qs; q0 = (q+1); fs = [q]; delta = (q,None,q+1)::(q+1,None,q)::(
-                (let rec helper2 lst = match lst with 
-                  [] -> []
-                  | h::t -> (h,None,q)::(helper2 t)
-                  in helper2 nfaa.fs)@nfaa.delta)}
-in let q0 = fresh () in helper regexp (q0) ({sigma = []; qs = [q0]; q0 = q0; fs = []; delta = []})
-in {sigma = List.sort_uniq Stdlib.compare ret.sigma; qs = List.sort_uniq Stdlib.compare ret.qs; q0 = ret.q0; fs = List.sort_uniq Stdlib.compare ret.fs; delta = List.sort_uniq Stdlib.compare ret.delta}
-*)
-
 let regexp_to_nfa (regexp: regexp_t) : (int, char) nfa_t = let ret = let rec helper r nfa = match r with
 | Empty_String -> let q = fresh ()
                   in {sigma = nfa.sigma; qs = q::nfa.qs; q0 = q; fs = [q]; delta = nfa.delta}
@@ -73,7 +51,7 @@ in {sigma = List.sort_uniq Stdlib.compare ret.sigma ;
 
 
 (*****************************************************************)
-(* Below this point is parser code that YOU DO NOT NEED TO TOUCH *)
+(* Below this point is parser code that I did not touch *)
 (*****************************************************************)
 
 exception IllegalExpression of string

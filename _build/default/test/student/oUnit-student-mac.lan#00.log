@@ -1,0 +1,50 @@
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Runner: processes
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Chooser: simple
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration suite_name = "student"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration cache_filename = "/Users/arikgershman/Desktop/3-arikger9/_build/default/test/student/oUnit-$(suite_name).cache"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration run_gc_full_major = "true"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration display = "true"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration results_style_1_X = "false"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration testdata_dir = "none"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration health_check_interval = "1."
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration verbose = "false"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration chooser = "simple"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration output_html_dir = "none"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration processes_kill_period = "5."
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration runner = "processes"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration shards = "2"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration processes_grace_period = "5."
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration log_encoding = "utf-8"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration output_junit_file = "none"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration ci = "false"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Configuration output_file = "/Users/arikgershman/Desktop/3-arikger9/_build/default/test/student/oUnit-$(suite_name)-$(shard_id).log"
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Using 2 workers maximum.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Starting worker number mac.lan#01.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Worker mac.lan#01 started.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 1 tests running : student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: 1 tests running: student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#01 I: Start test student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 1 tests running : student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: 1 tests running: student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#01 I: Test student:0:student_test1 is successful.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 1 tests running : student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: 1 tests running: student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#01 I: End test student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Still 1 tests running : student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: 1 tests running: student:0:student_test1.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: 0 tests running: .
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Worker mac.lan#01 has ended.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Used 1 worker during test execution.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Run 1 tests with shard mac.lan#01.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Check health of shard mac.lan#01, 1 times.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: ==============
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Summary:
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Test student:0:student_test1 is successful.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Ran: 1 tests in: 0.11 seconds.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Cases: 1.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Tried: 1.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Errors: 0.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Failures: 0.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Skip: 0.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Todo: 0.
+2025-07-27T18:14:32+00:00 mac.lan#00 I: Timeout: 0.
