@@ -1,6 +1,6 @@
 # Regular Expression Engine ⚙️
 
-This repository contains my implementation for Project 3, a Regular Expression Engine, from my CMSC320: Organization of Programming Languages at UMD. This project delves into the fundamental algorithms behind regular expressions, Non-deterministic Finite Automata (NFAs), and Deterministic Finite Automata (DFAs).
+This repository contains my implementation for Project 3, a Regular Expression Engine, from my CMSC330: Organization of Programming Languages at UMD. This project delves into the fundamental algorithms behind regular expressions, Non-deterministic Finite Automata (NFAs), and Deterministic Finite Automata (DFAs).
 
 The core objective was to implement key transformations and simulations that form the basis of a regular expression interpreter, demonstrating proficiency in functional programming and theoretical computer science concepts.
 
